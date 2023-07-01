@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
@@ -12,11 +13,13 @@ root.render(
 	<React.StrictMode>
 		<Auth0Provider
 			domain="dev-7xnae7lc84xt0nid.us.auth0.com"
-			clientId="nRAxx1Sy4em5WCyZuh6KWa3jC0SCw4oJ"
+			clientId="YjDuYIzInCfUS20Uc5KpwfSyzcTXHYHb"
 			authorizationParams={{
 				redirect_uri: window.location.origin,
 			}}>
-			<App />
+			<HashRouter>
+				<App />
+			</HashRouter>
 		</Auth0Provider>
 	</React.StrictMode>,
 );
